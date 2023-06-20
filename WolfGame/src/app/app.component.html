@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Golf Scorecard</h1>
+
+  <div class="scorecard" *ngFor="let player of players; let i = index">
+    <h2 class="player-name">Player {{ i + 1 }}</h2>
+    <div class="input-group">
+      <input [(ngModel)]="player.name" placeholder="Player Name" />
+      <button (click)="addScore(i)">+</button>
+    </div>
+    <div class="score">
+      Score: {{ player.score }}
+    </div>
+  </div>
+</div>
